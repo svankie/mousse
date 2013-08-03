@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>What:</strong>
+  <%= @thang.what %>
+</p>
+
+<p>
+  <strong>Where:</strong>
+  <%= @thang.where %>
+</p>
+
+<p>
+  <strong>When:</strong>
+  <%= @thang.when %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @thang.amount %>
+</p>
+
+<p>
+  <strong>Novelty rating:</strong>
+  <%= @thang.novelty_rating %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @thang.description %>
+</p>
+
+<p>
+  <strong>Flyer:</strong>
+  <%= @thang.flyer %>
+</p>
+
+<%= link_to 'Edit', edit_thang_path(@thang) %> |
+<%= link_to 'Back', thangs_path %>

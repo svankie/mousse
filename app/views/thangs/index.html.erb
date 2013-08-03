@@ -1,0 +1,39 @@
+<h1>Listing thangs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>What</th>
+      <th>Where</th>
+      <th>When</th>
+      <th>Amount</th>
+      <th>Novelty rating</th>
+      <th>Description</th>
+      <th>Flyer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thangs.each do |thang| %>
+      <tr>
+        <td><%= thang.what %></td>
+        <td><%= thang.where %></td>
+        <td><%= thang.when %></td>
+        <td><%= thang.amount %></td>
+        <td><%= thang.novelty_rating %></td>
+        <td><%= thang.description %></td>
+        <td><%= thang.flyer %></td>
+        <td><%= link_to 'Show', thang %></td>
+        <td><%= link_to 'Edit', edit_thang_path(thang) %></td>
+        <td><%= link_to 'Destroy', thang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thang', new_thang_path %>
