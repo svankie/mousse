@@ -10,16 +10,7 @@
   <div class="stream">
     <% unless @thangs.blank? %>
       <% @thangs.each do |thang| %>
-      <div class="kool">
-        <img class="flyer" src="assets/flyer_0.png" />
-        <div class="meta">
-          <div class="what">
-            <h2><%= link_to thang.what, thang_path(thang) %></h2>
-            <p><small><%= thang.when %> | <%= thang.where %></small></p>
-          </div>
-          <div class="description"></div>
-        </div>
-      </div>
+        <li><%= link_to thang.what, thang_path(thang.id) %></li>
       <% end %>
     <% end%>
   </div>
