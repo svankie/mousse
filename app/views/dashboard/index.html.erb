@@ -14,7 +14,7 @@
         <img class="flyer" src="assets/flyer_<%= cycle('0.jpg', '1.png', '2.jpg') -%>" />
         <div class="meta">
           <div class="what">
-            <h2><%= link_to thang.title, thang_path(thang) %></h2>
+            <h2><%= link_to thang.what, thang_path(thang) %></h2>
             <p><small><%= thang.when %> | <%= thang.where %></small></p>
           </div>
           <div class="description"></div>
