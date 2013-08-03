@@ -9,9 +9,11 @@
   </nav>
   <div class="stream">
     <% unless @thangs.blank? %>
+    <ul>
       <% @thangs.each do |thang| %>
-        <li><%= link_to thang.what, thang_path(thang.id) %></li>
+      <li><%= link_to thang.what, thang_path(thang.id) %></li>
       <% end %>
+    </ul>
     <% end%>
   </div>
 </div>
