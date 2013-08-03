@@ -11,7 +11,7 @@
     <% unless @thangs.blank? %>
       <% @thangs.each do |thang| %>
       <div class="kool">
-  <img class="flyer" src="assets/flyer_<%= cycle('0.jpg', '1.png', '2.jpg') -%>" />
+        <img class="flyer" src="assets/flyer_<%= cycle('0.jpg', '1.png', '2.jpg') -%>" />
         <div class="meta">
           <div class="what">
             <h2><%= link_to thang.title, thang_path(thang) %></h2>
