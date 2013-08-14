@@ -8,15 +8,15 @@
     </div>
   </nav>
   <div class="stream">
-    <% unless @things_by_date.blank? %>
-      <% @things_by_date.each_pair do |date, thangs| %>
+    <% unless @thangs_by_date.blank? %>
+      <% @thangs_by_date.each_pair do |date, thangs| %>
       <h3><%= date.strftime("%d/%m/%Y") %></h3>
       <% if thangs.blank? %>
         <p>Today's lame.</p>
       <% else %>
         <ul>
           <% thangs.each do |thang| %>
-          <li><%= link_to thang.what, thang_path(thang.id) %></li>
+          <li><h4><%= link_to thang.what, thang_path(thang.id) %><h4></li>
           <% end %>
         </ul>
       <% end%>
