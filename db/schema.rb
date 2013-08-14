@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130803013927) do
+ActiveRecord::Schema.define(version: 20130814143520) do
 
   create_table "thangs", force: true do |t|
     t.string   "what"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20130803013927) do
     t.decimal  "novelty_rating"
     t.text     "description"
     t.string   "flyer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
