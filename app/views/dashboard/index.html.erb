@@ -8,12 +8,19 @@
     </div>
   </nav>
   <div class="stream">
-    <% unless @thangs.blank? %>
-    <ul>
-      <% @thangs.each do |thang| %>
-      <li><%= link_to thang.what, thang_path(thang.id) %></li>
-      <% end %>
-    </ul>
-    <% end%>
+    <% unless @things_by_date.blank? %>
+      <% @things_by_date.each_pair do |date, thangs| %>
+      <h3><%= date.strftime("%d/%m/%Y") %></h3>
+      <% if thangs.blank? %>
+        <p>Today's lame.</p>
+      <% else %>
+        <ul>
+          <% thangs.each do |thang| %>
+          <li><%= link_to thang.what, thang_path(thang.id) %></li>
+          <% end %>
+        </ul>
+      <% end%>
+    <% end %>
+    <% end %>
   </div>
 </div>

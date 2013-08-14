@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    @thangs = Thang.all
+    @things_by_date = Thang.all.group_by { |t| t.when }
   end
 end
