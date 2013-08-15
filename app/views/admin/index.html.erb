@@ -1,3 +1,20 @@
-<h1>Welcome<h1>
+<div>
+  <header>
+    <h1>Welcome</h1>
+  </header>
 
-It's <%= Time.now %>
+  <section>
+    <p>
+      It's <%= @time %>.
+    </p>
+    <p>
+      There are <%= pluralize(@thangs, "thang") %> and <%= pluralize(@users, "user") %>.
+    </p>
+  </section>
+
+  <section>
+    <p><%= link_to "Create new Thang", new_thang_url %></p>
+    <p><%= link_to "Create new User", new_user_url %></p>
+    <p><%= link_to "Get the fuck outta here", logout_url %></p>
+  </section>
+</div>
