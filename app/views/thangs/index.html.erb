@@ -24,7 +24,7 @@
         <td><%= thang.date %></td>
         <td><%= thang.amount %></td>
         <td><%= thang.novelty_rating %></td>
-        <td><%= thang.description %></td>
+        <td><%= truncate(thang.description, length: 140) %></td>
         <td><%= thang.flyer %></td>
         <td><%= link_to 'Show', thang %></td>
         <td><%= link_to 'Edit', edit_thang_path(thang) %></td>

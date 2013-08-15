@@ -21,7 +21,7 @@
       <% else %>
         <ul>
           <% thangs.each do |thang| %>
-          <li><h3><%= link_to thang.what, thang_path(thang.id) %><h3></li>
+          <li><h3><%= link_to thang.what, thang_path(thang.id), title: thang.description %><h3></li>
           <% end %>
         </ul>
       <% end%>
