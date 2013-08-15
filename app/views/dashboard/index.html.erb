@@ -7,7 +7,7 @@
         <%- if session[:user_id] -%>
           <%= link_to "salí", logout_url, :method => :delete %>
         <% else %>
-          <%= mail_to("hello@recco.com.ar", "@", subject: "ACK", encode: "javascript") %>
+          <%= mail_to("hello@recco.com.ar", "-> @", subject: "ACK", encode: "javascript") %>
         <%- end -%>
       </p>
       <p><%= link_to "._. .·°", "#", :title => "going out is a timeless desire" %></p>
@@ -17,20 +17,19 @@
     <% unless @thangs_by_date.blank? %>
       <% @thangs_by_date.each_pair do |date, thangs| %>
       <h2><%= date.strftime("%d/%m/%Y") %></h2>
-      <% if thangs.blank? %>
-        <p>Today's lame.</p>
-      <% else %>
-        <ul>
-          <% thangs.each do |thang| %>
-          <li>
-            <h4>
-              !! <%= link_to "#{truncate(thang.what, length: 55)} en #{thang.place} a las 5 P.M.", thang_path(thang.id), title: thang.description -%>
-            </h4>
-          </li>
-          <% end %>
-        </ul>
+      <ul>
+        <% thangs.each do |thang| %>
+        <li>
+          <span class="thang">
+            !! <%= link_to "#{truncate(thang.what, length: 55)}", thang_path(thang.id), title: thang.description -%>
+          </span>
+          <small>
+            <em>En <%= thang.place %> a las ~<%= thang.date %></em>.
+          </small>
+        </li>
+        <% end %>
+      </ul>
       <% end%>
-    <% end %>
     <% end %>
   </div>
 </div>
