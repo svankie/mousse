@@ -1,7 +1,7 @@
 <div id="container">
   <nav>
     <div class="menu">
-      <img src="assets/logo.png" title="na bronk"></img>
+      <img src="assets/logo.png" />
       <p><%= link_to "eH... ¿qué es esto?", "#" %></p>
       <p>
         <%- if session[:user_id] -%>
@@ -10,7 +10,7 @@
           <%= mail_to("hello@recco.com.ar", "@", subject: "ACK", encode: "javascript") %>
         <%- end -%>
       </p>
-      <p><%= link_to "._.", "#", :title => "svankie was here" %></p>
+      <p><%= link_to "._. .·°", "#", :title => "going out is a timeless desire" %></p>
     </div>
   </nav>
   <div class="stream">
@@ -25,7 +25,7 @@
           <li>
             <h4>
               !! <%= link_to "#{truncate(thang.what, length: 55)} en #{thang.place} a las 5 P.M.", thang_path(thang.id), title: thang.description -%>
-            </h3>
+            </h4>
           </li>
           <% end %>
         </ul>
