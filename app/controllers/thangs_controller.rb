@@ -69,6 +69,6 @@ class ThangsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def thang_params
-      params.require(:thang).permit(:what, :where, :when, :amount, :novelty_rating, :description, :flyer)
+      params.require(:thang).permit(:what, :place, :date, :amount, :novelty_rating, :description, :flyer)
     end
 end
