@@ -2,12 +2,15 @@
   <nav>
     <div class="menu">
       <img src="assets/logo.png" title="na bronk"></img>
+      <p><%= link_to "eH... ¿qué es esto?", "#" %></p>
       <p>
-        <a href="#">¿qué?</a><br>
         <%- if session[:user_id] -%>
           <%= link_to "salí", logout_url, :method => :delete %>
+        <% else %>
+          <%= mail_to("hello@recco.com.ar", "@", subject: "ACK", encode: "javascript") %>
         <%- end -%>
       </p>
+      <p><%= link_to "._.", "#", :title => "svankie was here" %></p>
     </div>
   </nav>
   <div class="stream">
