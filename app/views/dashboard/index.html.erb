@@ -5,9 +5,9 @@
       <p>
         <a href="#">¿qué?</a><br>
         <%- unless session[:user_id] -%>
-          <%= link_to "cellar door", login_url %>
+          <%= link_to "entrá", login_url %>
         <% else %>  
-          <%= link_to "get outta here", logout_url, :method => :delete %>
+          <%= link_to "salí", logout_url, :method => :delete %>
         <%- end -%>
       </p>
     </div>
