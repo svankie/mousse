@@ -4,9 +4,7 @@
       <img src="assets/logo.png" title="na bronk"></img>
       <p>
         <a href="#">¿qué?</a><br>
-        <%- unless session[:user_id] -%>
-          <%= link_to "entrá", login_url %>
-        <% else %>  
+        <%- if session[:user_id] -%>
           <%= link_to "salí", logout_url, :method => :delete %>
         <%- end -%>
       </p>
