@@ -1,4 +1,6 @@
 Mousse::Application.routes.draw do
+  resources :users
+
   get "dashboard/index"
   resources :thangs
 
