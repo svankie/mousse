@@ -1,5 +1,6 @@
 class ThangsController < ApplicationController
   before_action :set_thang, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :authorize, only: :show
 
   # GET /thangs
   # GET /thangs.json
