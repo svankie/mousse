@@ -35,5 +35,9 @@
   <%= @thang.flyer %>
 </p>
 
-<%= link_to 'Edit', edit_thang_path(@thang) %> |
-<%= link_to 'Back', thangs_path %>
+<% if session[:user_id] %>
+  <%= link_to 'Edit', edit_thang_path(@thang) %> |
+  <%= link_to 'Back', thangs_path %>
+<% else %>
+  <%= link_to 'Back', root_path %>
+<% end %>
