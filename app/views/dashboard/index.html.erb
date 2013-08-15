@@ -2,7 +2,7 @@
   <nav>
     <div class="menu">
       <img src="assets/logo.png" />
-      <p><%= link_to "eH... ¿qué es esto?", "#" %></p>
+      <p><%= link_to "eH... ¿qué es esto?", about_url %></p>
       <p>
         <%- if session[:user_id] -%>
           <%= link_to "salí", logout_url, :method => :delete %>
