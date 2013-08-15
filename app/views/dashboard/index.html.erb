@@ -4,7 +4,11 @@
       <img src="assets/logo.png" title="na bronk"></img>
       <p>
         <a href="#">¿qué?</a><br>
-        <%= link_to "cellar door", login_url %>
+        <%- unless session[:user_id] -%>
+          <%= link_to "cellar door", login_url %>
+        <% else %>  
+          <%= link_to "get outta here", logout_url, :method => :delete %>
+        <%- end -%>
       </p>
     </div>
   </nav>
