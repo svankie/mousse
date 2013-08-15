@@ -21,7 +21,11 @@
       <% else %>
         <ul>
           <% thangs.each do |thang| %>
-          <li><h3><%= link_to thang.what, thang_path(thang.id), title: thang.description %><h3></li>
+          <li>
+            <h4>
+              !! <%= link_to "#{truncate(thang.what, length: 55)} en #{thang.place} a las 5 P.M.", thang_path(thang.id), title: thang.description -%>
+            </h3>
+          </li>
           <% end %>
         </ul>
       <% end%>

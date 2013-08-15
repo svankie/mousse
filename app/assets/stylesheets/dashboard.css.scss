@@ -25,7 +25,7 @@ nav {
 }
 
 .menu > img {
-  border: 1px solid orange;
+  border: 2px solid lightblue;
 }
 
 .menu a {
@@ -41,6 +41,16 @@ nav {
 
 .stream > ul {
   list-style-type: none;
+}
+
+.stream a {
+  text-decoration: none;
+  color: black;
+}
+
+.stream a:visited {
+  color: rgb(92, 92, 92);
+  background-color: rgb(237, 237, 237);
 }
 
 .kool {
