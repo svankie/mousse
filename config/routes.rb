@@ -1,7 +1,13 @@
 Mousse::Application.routes.draw do
-  resources :users
+  get 'admin' => "admin#index"
+  
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'login' => :destroy
+  end
 
-  get "dashboard/index"
+  resources :users
   resources :thangs
 
   # The priority is based upon order of creation: first created -> highest priority.
