@@ -13,23 +13,5 @@
       <p><%= link_to "._. .·°", "#", :title => "going out is a timeless desire" %></p>
     </div>
   </nav>
-  <div class="stream">
-    <% unless @thangs_by_date.blank? %>
-      <% @thangs_by_date.each_pair do |date, thangs| %>
-      <h2><%= date.strftime("%d/%m/%Y") %></h2>
-      <ul>
-        <% thangs.each do |thang| %>
-        <li>
-          <span class="thang">
-            !! <%= link_to "#{truncate(thang.what, length: 55)}", thang_path(thang.id), title: thang.description -%>
-          </span>
-          <small>
-            <em>En <%= thang.place %> a las ~<%= thang.date %></em>.
-          </small>
-        </li>
-        <% end %>
-      </ul>
-      <% end%>
-    <% end %>
-  </div>
+  <div class="stream"></div>
 </div>
