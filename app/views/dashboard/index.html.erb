@@ -7,7 +7,7 @@
         <%- if session[:user_id] -%>
           <%= link_to "salí", logout_url, :method => :delete %>
         <% else %>
-          <%= mail_to("hello@recco.com.ar", "-> @", subject: "ACK", encode: "javascript") %>
+          <%= mail_to("svankie@gmail.com", "-> @", subject: "ACK", encode: "javascript") %>
         <%- end -%>
       </p>
       <p><%= link_to "._. .·°", "#", :title => "going out is a timeless desire" %></p>
