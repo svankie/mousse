@@ -2,9 +2,8 @@ class DashboardController < ApplicationController
   skip_before_filter :authorize
 
   def index
-    @thangs_by_date = Thang.all.group_by(&:date)
+    @thangs = Thang.order("date DESC")
   end
 
-  def about
-  end
+  def about; end
 end

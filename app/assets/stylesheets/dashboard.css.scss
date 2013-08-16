@@ -33,3 +33,16 @@ nav {
   vertical-align: top;
   width: 77.5%;
 }
+
+div.unit a {
+  text-decoration: none;
+  color: black;
+  &:visited {
+    color: grey;
+    background-color: ivory;
+  }
+  &:hover {
+    color: skyblue;
+    background-color: ivory;
+  }
+}

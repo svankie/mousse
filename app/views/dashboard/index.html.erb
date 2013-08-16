@@ -1,17 +1,25 @@
 <div id="container">
   <nav>
     <div class="menu">
-      <img src="assets/logo.png" />
+      <img src="assets/logo.png" title="._.·° going out is a timeless desire" />
       <p><%= link_to "eH... ¿qué es esto?", about_url %></p>
       <p>
         <%- if session[:user_id] -%>
           <%= link_to "salí", logout_url, :method => :delete %>
         <% else %>
-          <%= mail_to("svankie@gmail.com", "-> @", subject: "ACK", encode: "javascript") %>
+          <%= mail_to("svankie@gmail.com", "-> @", subject: "SYN", encode: "javascript") %>
         <%- end -%>
       </p>
-      <p><%= link_to "._. .·°", "#", :title => "going out is a timeless desire" %></p>
     </div>
   </nav>
-  <div class="stream"></div>
+  <div class="stream">
+    <% unless @thangs.blank? %>
+      <% @thangs.each do |thang| %>
+        <div class="unit">
+          <h4><%= link_to thang.what, thang_path(thang) %></h4>
+          <p><%= truncate(thang.description, length: 75) %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
