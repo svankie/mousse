@@ -22,4 +22,4 @@
 es:
   time:
     formats:
-      short: "%A %d de %B @ %H:%M"
+      short: "%d-%m-%Y @ %H:%M"
