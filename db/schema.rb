@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130814153626) do
+ActiveRecord::Schema.define(version: 20130817002929) do
 
   create_table "thangs", force: true do |t|
     t.string   "what"
