@@ -24,7 +24,7 @@
               <%= thang.place %>
             </span> |
             <span>
-                <%= thang.date.to_date.inspect %> at noon
+              <%= thang.date.hour %>:<%= thang.date.min %>
             </span>
           </div>
           <p><%= truncate(thang.description, length: 350) %></p>
