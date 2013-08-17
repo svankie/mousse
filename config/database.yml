@@ -21,6 +21,9 @@ test:
 
 production:
   adapter: postgresql
-  database: mousse_production
+  database: d2ieomvbbdbr8k
+  username: byaaeghjbkyfzy
+  password: JGi5HYNaWh0H9SRfxPcZWG32MO
+  port: 5432
   pool: 5
   timeout: 5000
