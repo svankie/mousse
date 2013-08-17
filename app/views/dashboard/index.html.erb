@@ -17,14 +17,14 @@
       <% @thangs.each do |thang| %>
         <div class="unit">
           <div class="header">
-            <%= link_to thang.what, thang_path(thang) %>
+            <%= link_to thang.what.downcase, thang_path(thang) %>
           </div>
           <div class="details">
             <span>
-              <%= thang.place %>
+              <%= thang.place.downcase %>
             </span> |
             <span>
-              <%= I18n.localize(thang.date, format: :short) %>
+              <%= I18n.localize(thang.date, :format => "%A %d a las %H:%M") %>
             </span>
           </div>
           <p><%= truncate(thang.description, length: 350) %></p>
