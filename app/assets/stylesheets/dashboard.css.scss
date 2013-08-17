@@ -34,6 +34,10 @@ nav {
   width: 77.5%;
 }
 
+div.unit {
+  margin: 35px auto;
+}
+
 div.unit a {
   text-decoration: none;
   color: black;
@@ -43,6 +47,20 @@ div.unit a {
   }
   &:hover {
     color: skyblue;
-    background-color: ivory;
+    background-color: beige;
   }
+}
+
+div.unit .header {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+div.details {
+  margin-top: 2px;
+}
+
+div.unit div.details span {
+  font-weight: bold;
 }

@@ -7,7 +7,7 @@
         <%- if session[:user_id] -%>
           <%= link_to "salí", logout_url, :method => :delete %>
         <% else %>
-          <%= mail_to("svankie@gmail.com", "-> @", subject: "SYN", encode: "javascript") %>
+          <%= mail_to("airOnGString@gmail.com", "-> @", subject: "SYN", encode: "javascript") %>
         <%- end -%>
       </p>
     </div>
@@ -16,8 +16,18 @@
     <% unless @thangs.blank? %>
       <% @thangs.each do |thang| %>
         <div class="unit">
-          <h4><%= link_to thang.what, thang_path(thang) %></h4>
-          <p><%= truncate(thang.description, length: 75) %></p>
+          <div class="header">
+            <%= link_to thang.what, thang_path(thang) %>
+          </div>
+          <div class="details">
+            <span>
+              <%= thang.place %>
+            </span> |
+            <span>
+                <%= thang.date.to_date.inspect %> at noon
+            </span>
+          </div>
+          <p><%= truncate(thang.description, length: 350) %></p>
         </div>
       <% end %>
     <% end %>
