@@ -24,7 +24,7 @@
               <%= thang.place %>
             </span> |
             <span>
-              <%= thang.date.hour %>:<%= thang.date.min %>
+              <%= I18n.localize(thang.date, format: :short) %>
             </span>
           </div>
           <p><%= truncate(thang.description, length: 350) %></p>
