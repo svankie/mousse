@@ -1,7 +1,7 @@
 <div id="container">
   <nav>
     <div class="menu">
-      <img src="assets/logo.png" title="._.·° going out is a timeless desire" />
+      <%= image_tag "logo.png", alt: "loguito", title: "._.·° going out is a timeless desire" %>
       <p><%= link_to "eH... ¿qué es esto?", about_url %></p>
       <p>
         <%- if session[:user_id] -%>
