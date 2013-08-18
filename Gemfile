@@ -44,7 +44,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 
 gem 'rails_12factor'
 gem 'rails-i18n'
