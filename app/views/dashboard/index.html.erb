@@ -2,12 +2,12 @@
   <nav>
     <div class="menu">
       <%= image_tag "logo.png", alt: "loguito", title: "._.·° going out is a timeless desire" %>
-      <p><%= link_to "eH... ¿qué es esto?", about_url %></p>
+      <p><%= link_to "kestapasando", about_url %></p>
       <p>
         <%- if session[:user_id] -%>
           <%= link_to "salí", logout_url, :method => :delete %>
         <% else %>
-          <%= mail_to("airOnGString@gmail.com", "-> @", subject: "SYN", encode: "javascript") %>
+          <%= mail_to("airOnGString@gmail.com", "hola ~> @", subject: "SYN", encode: "javascript") %>
         <%- end -%>
       </p>
     </div>
