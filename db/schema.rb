@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130817002929) do
+ActiveRecord::Schema.define(version: 20130820115611) do
 
   create_table "thangs", force: true do |t|
     t.string   "what"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20130817002929) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_admin",        default: false
   end
 
 end

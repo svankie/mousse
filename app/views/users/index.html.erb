@@ -1,13 +1,18 @@
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
 <h1>Listing users</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Password digest</th>
       <th></th>
-      <th></th>
-      <th></th>
+      <% if current_user.is_admin %>
+        <th></th>
+        <th></th>
+      <% end %>
     </tr>
   </thead>
 
@@ -15,10 +20,11 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= user.password_digest %></td>
         <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.is_admin %>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -26,5 +32,8 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
-<%= link_to 'Logout', logout_path, method: :delete %>
+<% if current_user.is_admin %>
+  <td><%= link_to 'New User', new_user_path %></p>
+<% end %>
+
+<%= link_to 'Logoff', logout_path, method: :delete %>
