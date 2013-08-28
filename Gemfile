@@ -49,5 +49,5 @@ gem 'debugger', group: [:development, :test]
 gem 'rails_12factor'
 gem 'rails-i18n'
 
-
 gem 'foreman'
+gem 'friendly_id', '5.0.0.beta4'
