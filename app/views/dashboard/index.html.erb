@@ -24,7 +24,7 @@
               <%= thang.place.downcase %>
             </span> |
             <span>
-              <%= I18n.localize(thang.date, :format => "%A %d de %m a las %H:%M") %>
+              <%= I18n.localize(thang.date, :format => "%A %d de %B a las %H:%M") %>
             </span>
           </div>
           <p><%= truncate(thang.description, length: 350) %></p>
