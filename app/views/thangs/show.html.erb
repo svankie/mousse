@@ -15,7 +15,7 @@
 
 <p>
   <strong>¿Cuánto decís?</strong>
-	<% amount = (@thang.amount == 0) ? "Gratis." : @thang.amount %>
+	<% amount = (@thang.amount == 0) ? "Gratis." : "#{@thang.amount.to_i} pesos." %>
   <%= amount %>
 </p>
 
