@@ -48,3 +48,6 @@ gem 'debugger', group: [:development, :test]
 
 gem 'rails_12factor'
 gem 'rails-i18n'
+
+
+gem 'foreman'
