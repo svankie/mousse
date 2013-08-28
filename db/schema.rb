@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130820115611) do
+ActiveRecord::Schema.define(version: 20130828195440) do
 
   create_table "thangs", force: true do |t|
     t.string   "what"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20130820115611) do
     t.string   "flyer"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "archived"
   end
 
   create_table "users", force: true do |t|
