@@ -24,13 +24,14 @@
   <%= @thang.description %>
 </p>
 
-<% if session[:user_id] %>
-  <%= link_to 'Edit', edit_thang_path(@thang) %> |
-  <%= link_to 'Back', thangs_path %>
-<% else %>
-  <%= link_to 'Atrás', root_path %>
-<% end %>
-
+<p>
+	<% if session[:user_id] %>
+  	<%= link_to 'Edit', edit_thang_path(@thang) %> |
+  	<%= link_to 'Back', thangs_path %>
+	<% else %>
+  	<%= link_to 'Atrás', root_path %>
+	<% end %>
+</p>
 <div id="diskus">
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
