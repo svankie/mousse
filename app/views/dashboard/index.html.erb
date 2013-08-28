@@ -17,7 +17,7 @@
       <% @thangs.each do |thang| %>
         <div class="unit">
           <div class="header">
-            <%= link_to thang.what.mb_chars.normalize(:kd).downcase.to_s thang_path(thang) %>
+            <%= link_to thang.what.mb_chars.normalize(:kd).downcase.to_s, thang_path(thang) %>
           </div>
           <div class="details">
             <span>
