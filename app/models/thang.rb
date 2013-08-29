@@ -1,6 +1,8 @@
 class Thang < ActiveRecord::Base
 	include FriendlyId
 
+	is_impressionable :counter_cache => true, :column_name => "pageviews"
+
 	friendly_id :what, use: :slugged
 
   validates :what, :place, :date, :description, presence: true
