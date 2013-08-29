@@ -53,3 +53,5 @@ gem 'foreman'
 gem 'friendly_id', '5.0.0.beta4'
 
 gem 'whenever', :require => false
+
+gem 'impressionist'

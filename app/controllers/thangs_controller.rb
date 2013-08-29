@@ -11,6 +11,7 @@ class ThangsController < ApplicationController
   # GET /thangs/1
   # GET /thangs/1.json
   def show
+		impressionist(@thang)
   end
 
   # GET /thangs/new
