@@ -9,7 +9,7 @@
 			<%- @thangs.each do |thang_title, pageviews| -%>
 			<tr>
 				<td>
-					<%= thang_title %>
+					<%= truncate(thang_title, lenght:15) %>
 				</td>
 				<td>
 					<%= pageviews %> pageviews
