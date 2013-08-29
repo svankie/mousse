@@ -1,6 +1,6 @@
 <div>
   <header>
-    <h1>Welcome</h1>
+    <h1>Welcome, bitch.</h1>
   </header>
 
   <section>
@@ -14,10 +14,17 @@
 
   <section>
     <p><%= link_to "Go to Homepage", root_url %></p>
-    <p><%= link_to "Thang administration", thangs_url %></p>
+    
+		<h4>Main administrative actions</h4>
+		<p><%= link_to "Thang administration", thangs_url %></p>
     <% if current_user.is_admin %>
       <p><%= link_to "User administration", users_url %></p>
     <% end %>
+
+		<h4>Other administrative tasks</h4>
+    <p><%= link_to "Send pageviews report", pageviews_url %></p>
+	
+		<h4>Finale</h4>
     <p><%= link_to "Logoff", logout_url, :method => :delete %></p>
   </section>
 </div>
