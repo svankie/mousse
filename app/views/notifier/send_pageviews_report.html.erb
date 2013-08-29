@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Weekly pageview report from Recco!</h1>
+		<table align="center">
+			<%- @thangs.each do |thang_title, pageviews| -%>
+			<tr>
+				<td>
+					<%= truncate(thang_title, lenght:15) %>
+				</td>
+				<td>
+					<%= pageviews %> pageviews
+				</td>
+			</tr>
+			<%- end -%>
+		</table>
+    <p>Have a great day!</p>
+		<p>--The nasty folks behind Recco..</p>
+  </body>
+</html>

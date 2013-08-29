@@ -1,6 +1,7 @@
 Mousse::Application.routes.draw do
   get 'admin' => "admin#index"
-  
+  get 'pageviews' => "admin#pageviews"
+
   controller :sessions do
     get 'login' => :new
     post 'login' => :create
