@@ -15,9 +15,13 @@
   <div class="stream">
     <% unless @thangs.blank? %>
       <% @thangs.each do |thang| %>
-        <div class="unit">
+        <div class="unit" >
           <div class="header">
-            <%= link_to thang.what.mb_chars.normalize(:kd).downcase.to_s, thang_path(thang) %>
+            <% if thang.date.day == DateTime.now.day %>
+							<%= link_to thang.what.mb_chars.normalize(:kd).downcase.to_s, thang_path(thang), :class => 'today' %>
+            <% else %>
+							<%= link_to thang.what.mb_chars.normalize(:kd).downcase.to_s, thang_path(thang) %>
+						<% end %>
           </div>
           <div class="details">
             <span>

@@ -49,6 +49,10 @@ div.unit a {
     color: skyblue;
     background-color: beige;
   }
+  &.today {
+	  color: black;
+		background: crimson;
+  }
 }
 
 div.unit .header {
