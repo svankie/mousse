@@ -55,3 +55,9 @@ gem 'friendly_id', '5.0.0.beta4'
 gem 'whenever', :require => false
 
 gem 'impressionist'
+
+group :development, :test do
+  gem 'factory_girl'
+  gem 'rspec'
+  gem 'rspec-rails'
+end
