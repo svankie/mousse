@@ -8,4 +8,10 @@ describe Relationship do
   subject { relationship }
 
   it { should be_valid }
+
+  it { should respond_to(:follower) }
+  it { should respond_to(:followed) }
+
+  its(:follower) { should eq follower }
+  its(:followed) { should eq followed }
 end
