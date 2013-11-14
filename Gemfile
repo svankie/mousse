@@ -57,6 +57,9 @@ gem 'whenever', :require => false
 gem 'impressionist'
 
 group :development, :test do
+  gem 'guard'
+  gem 'guard-rails'
+  gem 'guard-rspec'
   gem 'factory_girl'
   gem 'rspec'
   gem 'rspec-rails'
